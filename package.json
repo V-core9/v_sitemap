@@ -1,6 +1,6 @@
 {
   "name": "v_sitemap",
-  "version": "1.0.0",
+  "version": "0.0.01",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/V-core9/v_sitemap/issues"
   },
-  "homepage": "https://github.com/V-core9/v_sitemap#readme"
+  "homepage": "https://github.com/V-core9/v_sitemap#readme",
+  "dependencies": {
+    "v_file_system": "^1.0.5"
+  }
 }
