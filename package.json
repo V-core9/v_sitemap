@@ -1,7 +1,7 @@
 {
     "name": "v_sitemap",
     "version": "0.0.01",
-    "description": "",
+    "description": "Simple XML Sitemap Generator. Uses array of links and provides sitemapindex and urlset.",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,8 +11,16 @@
         "type": "git",
         "url": "git+https://github.com/V-core9/v_sitemap.git"
     },
-    "keywords": [],
-    "author": "",
+    "keywords": [
+        "v_sitemap",
+        "sitemap",
+        "generator",
+        "xml sitemap",
+        "xml sitemap generator",
+        "sitemap generator",
+        "v-core9"
+    ],
+    "author": "V-core9",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/V-core9/v_sitemap/issues"
