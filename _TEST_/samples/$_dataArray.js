@@ -1,6 +1,4 @@
-const v_sitemap = require('../../');
-
-const dataArray = [
+module.exports = [
     {
         name: 'Home',
         path: '/',
@@ -22,9 +20,3 @@ const dataArray = [
         priority: 0.9,
     } 
 ];
-
-(async () => {
-    console.log(await v_sitemap({dataArray}));
-    console.log(await v_sitemap({data: dataArray, index: true}));
-    console.log(await v_sitemap({data: dataArray, index: true, output: "output_sample.base_01"}));
-})();
