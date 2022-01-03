@@ -1,0 +1,20 @@
+{
+  "name": "v_sitemap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/V-core9/v_sitemap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/V-core9/v_sitemap/issues"
+  },
+  "homepage": "https://github.com/V-core9/v_sitemap#readme"
+}
