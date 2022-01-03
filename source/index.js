@@ -1,38 +1,19 @@
 const vFS = require('v_file_system');
 
-const config = {
-    host: "https://v-core9.com",
-    xml_version: "1.0",
-    xml_encoding: "UTF-8"
+const v_sitemap = {
+    config : require('./config'),
+    index_map : require('./index.map'),
+    sitemap : require('./site.map')
 };
 
-
-module.exports = async ({data, index = false, output = null}) => {
-    var resp = '<?xml version="1.0" encoding="UTF-8"?>';
-
+module.exports = async ({ data, index = false, output = null }) => {
+    var resp = '<?xml version="'+v_sitemap.config.xml_version+'" encoding="'+v_sitemap.config.xml_encoding+'"?>';
     if (index === true) {
-        resp += '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-        for (let i = 0; i < data.length; i++) {
-            resp += `<sitemap>
-                        <loc>${config.host}${data[i].path}</loc>
-                    </sitemap>`;
-        }
-        resp += `</sitemapindex>`;
+        resp += await v_sitemap.index_map({data: data, config: v_sitemap.config});
     } else {
-        resp += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-        for (let i = 0; i < data.length; i++) {
-            resp += `<url>
-                        <loc>${config.host}${data[i].path}</loc>
-                        <lastmod>${data[i].lastmod}</lastmod>
-                        <changefreq>${data[i].changefreq}</changefreq>
-                        <priority>${data[i].priority}</priority>
-                    </url>`;
-        }
-        resp += `</urlset>`;
+        resp += await v_sitemap.sitemap({data: data, config: v_sitemap.config});
     }
-
-    if (output !== null) await vFS.write(output, JSON.stringify(resp, true, 2));
-
+    if (output !== null) await vFS.write(output, `${resp}`);
     return resp;
 };
 

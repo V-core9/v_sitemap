@@ -1,0 +1,19 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".editorconfig": true,
+        ".vscode": true,
+        "package-lock.json": true,
+        "source": true,
+        "node_modules": true,
+        ".gitignore": true,
+        ".jshintrc": true,
+        "LICENSE": true
+    },
+    "explorerExclude.backup": null
+}
