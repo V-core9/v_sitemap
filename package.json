@@ -1,6 +1,6 @@
 {
     "name": "v_sitemap",
-    "version": "0.0.01",
+    "version": "0.0.02",
     "description": "Simple XML Sitemap Generator. Uses array of links and provides sitemapindex and urlset.",
     "main": "index.js",
     "scripts": {

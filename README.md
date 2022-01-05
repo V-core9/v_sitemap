@@ -39,7 +39,11 @@
         } 
     ];
 
-    const myMap = {data: DEMO_DATA, index: true, output: "DEMO_DATA.xml"};
+    const myMap = {
+        data: DEMO_DATA, 
+        index: true, 
+        output: "DEMO_DATA.xml"
+        };
 
     v_sitemap(myMap);
 
@@ -96,17 +100,20 @@
     </urlset>
 
 # 
+## 2.3. Styled sitemap
+> By adding additional entry that is URL path to the file: 
+
+    const myStyledMap = {
+        data: DEMO_DATA,
+        index: true,
+        output: "sample.myStyledMap.xml",
+        stylesheet:  "v-core9.com/style/XSL/sitemap.xsl"
+    };
+
+    v_sitemap(myStyledMap);
 
 ## Sitemap Generation Options?
 
 
 >### NOTICE: 
 >For now just check \_TEST\_ Directory & "sample.run.js" file for more info 
-
-    const myMap = {
-        data: DEMO_DATA,       
-        index: false,
-        output: "DEMO_DATA.bt03.xml"
-    };
-
-    v_sitemap(myMap);

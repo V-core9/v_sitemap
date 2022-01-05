@@ -9,7 +9,6 @@
         ".editorconfig": true,
         ".vscode": true,
         "package-lock.json": true,
-        "source": true,
         "node_modules": true,
         ".gitignore": true,
         ".jshintrc": true,

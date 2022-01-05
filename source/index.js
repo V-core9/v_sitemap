@@ -6,8 +6,9 @@ const v_sitemap = {
     sitemap : require('./site.map')
 };
 
-module.exports = async ({ data, index = false, output = null }) => {
+module.exports = async ({ data, index = false, output = null , stylesheet = null}) => {
     var resp = '<?xml version="'+v_sitemap.config.xml_version+'" encoding="'+v_sitemap.config.xml_encoding+'"?>';
+    if (stylesheet !== null) resp += '<?xml-stylesheet type="text/xsl" href="//' + stylesheet + '"?>';
     if (index === true) {
         resp += await v_sitemap.index_map({data: data, config: v_sitemap.config});
     } else {

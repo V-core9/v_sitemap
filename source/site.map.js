@@ -4,7 +4,7 @@ module.exports = async (value) => {
     for (let i = 0; i < data.length; i++) {
         resp += `
     <url>
-        <loc>${config.host}${data[i].path}</loc>
+        <loc>${data[i].path}</loc>
         <lastmod>${data[i].lastmod}</lastmod>
         <changefreq>${data[i].changefreq}</changefreq>
         <priority>${data[i].priority}</priority>

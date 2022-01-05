@@ -3,7 +3,8 @@ module.exports = async (value) => {
     var resp = '\n<sitemapindex xmlns="'+config.xmlns+'">';
     for (let i = 0; i < data.length; i++) {
         resp += `\n    <sitemap>
-        <loc>${config.host}${data[i].path}</loc>
+        <loc>${data[i].path}</loc>
+        <lastmod>${data[i].lastmod}</lastmod>
     </sitemap>`;
     }
     resp += `\n</sitemapindex>`;
